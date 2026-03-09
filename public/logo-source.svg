@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Background -->
+  <rect width="512" height="512" rx="80" ry="80" fill="#1B2B4B"/>
+
+  <!-- Shield shape -->
+  <path d="M256 50 L346 90 L346 200 Q346 278 256 325 Q166 278 166 200 L166 90 Z"
+        fill="none" stroke="white" stroke-width="13" stroke-linejoin="round"/>
+
+  <!-- Outer V -->
+  <polyline points="190,108 256,190 322,108" fill="none" stroke="white" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Inner V -->
+  <polyline points="213,130 256,178 299,130" fill="none" stroke="white" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Diamond -->
+  <polygon points="256,88 280,118 256,146 232,118" fill="none" stroke="white" stroke-width="9" stroke-linejoin="round"/>
+  <!-- Bottom stem -->
+  <line x1="256" y1="190" x2="256" y2="238" stroke="white" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- App Cliente text -->
+  <text x="256" y="372" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="68" fill="white" text-anchor="middle">App Cliente</text>
+
+  <!-- BARBEARIA text -->
+  <text x="256" y="428" font-family="Arial, sans-serif" font-weight="400" font-size="30" fill="white" text-anchor="middle" letter-spacing="10">BARBEARIA</text>
+</svg>
