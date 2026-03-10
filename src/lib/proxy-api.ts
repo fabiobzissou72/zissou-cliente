@@ -26,7 +26,9 @@ function normalizeBaseUrl(raw: string): string {
 
 function getProxyConfig(): { config: ProxyConfig } | { errorResponse: NextResponse } {
   const rawBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL
-  const token = process.env.NEXT_PUBLIC_API_TOKEN
+  // API_TOKEN: variável server-side (sem NEXT_PUBLIC_) — aplicada em runtime no Vercel
+  // Sem necessidade de rebuild ao trocar o token
+  const token = process.env.API_TOKEN || process.env.NEXT_PUBLIC_API_TOKEN
 
   if (!rawBaseUrl) {
     return {
@@ -45,7 +47,7 @@ function getProxyConfig(): { config: ProxyConfig } | { errorResponse: NextRespon
       errorResponse: NextResponse.json(
         {
           error: 'erro de config',
-          detalhe: 'NEXT_PUBLIC_API_TOKEN nao configurado'
+          detalhe: 'API_TOKEN nao configurado (adicione no Vercel sem NEXT_PUBLIC_)'
         },
         { status: 500, headers: NO_STORE_HEADERS }
       )
